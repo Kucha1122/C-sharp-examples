@@ -1,0 +1,8 @@
+C:\shop\bin\Debug\netcoreapp1.1\shop.deps.json
+C:\shop\bin\Debug\netcoreapp1.1\shop.runtimeconfig.json
+C:\shop\bin\Debug\netcoreapp1.1\shop.runtimeconfig.dev.json
+C:\shop\bin\Debug\netcoreapp1.1\shop.dll
+C:\shop\bin\Debug\netcoreapp1.1\shop.pdb
+C:\shop\obj\Debug\netcoreapp1.1\shop.AssemblyInfo.cs
+C:\shop\obj\Debug\netcoreapp1.1\shop.dll
+C:\shop\obj\Debug\netcoreapp1.1\shop.pdb
