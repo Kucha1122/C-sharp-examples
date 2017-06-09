@@ -1,9 +1,11 @@
 using System;
+using System.Collections.Generic;
 
 namespace shop.Models
 {
     public class User
     {
+        private ISet<Order> _orders = new HashSet<Order>();
         public string Email { get; private set; }
         public string Password { get; private set; }
         public string FirstName { get; set; }
@@ -12,6 +14,7 @@ namespace shop.Models
         public decimal Funds { get; private set; }
         public bool isActive { get; private set; }
         public DateTime UpdatedAt { get; private set; }
+        public IEnumerable<Order> Orders { get {return _orders;} }
 
         public User(string email,string password)
         {
@@ -109,6 +112,7 @@ namespace shop.Models
 
             order.Purchase();
             Funds -= orderPrice;
+            _orders.Add(order);
             Update();
         }
 

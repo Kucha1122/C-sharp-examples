@@ -9,7 +9,7 @@ namespace shop
         {
             Console.WriteLine("App is running!");
             Order order1 = new Order(1, 100);
-            User user = new User("uyu1@o2.pl", "haselko");
+            User user = new User("agafg@o2.pl", "haselko");
         }
     }
 }
