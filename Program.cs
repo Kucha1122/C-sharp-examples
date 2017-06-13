@@ -1,4 +1,5 @@
 ﻿using System;
+using Episode3.Models;
 using shop.Models;
 
 namespace shop
@@ -7,9 +8,8 @@ namespace shop
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("App is running!");
-            Order order1 = new Order(1, 100);
-            User user = new User("agafg@o2.pl", "haselko");
+            var enumerations = new Enumerations();
+            enumerations.Test();
         }
     }
 }

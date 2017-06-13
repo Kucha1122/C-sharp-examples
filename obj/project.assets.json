@@ -7042,16 +7042,16 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\shop\\shop.csproj",
+      "projectUniqueName": "c:\\shop\\shop.csproj",
       "projectName": "shop",
-      "projectPath": "C:\\shop\\shop.csproj",
-      "outputPath": "C:\\shop\\obj\\",
+      "projectPath": "c:\\shop\\shop.csproj",
+      "outputPath": "c:\\shop\\obj\\",
       "projectStyle": "PackageReference",
       "originalTargetFrameworks": [
         "netcoreapp1.1"
       ],
       "files": {
-        "lib/netcoreapp1.1/shop.dll": "C:\\shop\\bin\\placeholder\\netcoreapp1.1\\shop.dll"
+        "lib/netcoreapp1.1/shop.dll": "c:\\shop\\bin\\placeholder\\netcoreapp1.1\\shop.dll"
       },
       "frameworks": {
         "netcoreapp1.1": {
