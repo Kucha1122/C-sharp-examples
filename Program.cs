@@ -7,8 +7,8 @@ namespace shop
     {
         static void Main(string[] args)
         {
-            var attributes = new Attributes();
-            attributes.Test();
+            var asynchronous = new Asynchronous();
+            asynchronous.Test().Wait();
         }
     }
 }

@@ -3,6 +3,8 @@ using System.Dynamic;
 using System.Linq;
 using System.Reflection;
 using System.ComponentModel.DataAnnotations;
+using System.Net.Http;
+using System.Threading.Tasks;
 
 namespace shop.Models
 {
@@ -94,6 +96,23 @@ namespace shop.Models
         public UserPasswordAttribute(int length = 4)
         {
             Length = length;
+        }
+    }
+    public class Asynchronous
+    {
+        public async Task Test()
+        {
+            var content = await GetContentAsync();
+            Console.WriteLine(content);
+        }
+
+        public async Task<string> GetContentAsync()
+        {
+            var httpClient = new HttpClient();
+            var response = await httpClient.GetAsync("http://jsonplaceholder.typicode.com/photos");
+            var content = await response.Content.ReadAsStringAsync();
+
+            return content;
         }
     }
 }
