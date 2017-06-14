@@ -1,4 +1,5 @@
 using System;
+using System.Dynamic;
 using System.Linq;
 using System.Reflection;
 
@@ -44,5 +45,28 @@ namespace shop.Models
             var user5 = (User)Activator.CreateInstance(typeof(User), new []{"user5gmail.com", "hpassword"});
             Console.WriteLine($"{user5.Email}");
         }
+    }
+
+    public class Dynamics
+    {
+        public void Test()
+        {
+            dynamic user = new User("user@email.com", "haselko");
+            Console.WriteLine($"{user.Email}");
+            user.SetEmail("user10@gmail.com");
+            Console.WriteLine($"{user.Email}");
+
+            dynamic anything = new ExpandoObject();
+            anything.id = 1;
+            anything.name = "me";
+            
+            Console.WriteLine($"{anything.id} {anything.name}");
+
+            foreach(var property in anything)
+            {
+                Console.WriteLine($"{property.Key}: {property.Value}");
+            }
+        }
+
     }
 }

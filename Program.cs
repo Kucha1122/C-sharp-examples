@@ -7,8 +7,8 @@ namespace shop
     {
         static void Main(string[] args)
         {
-            var reflections = new Reflections();
-            reflections.Test();
+            var dynamics = new Dynamics();
+            dynamics.Test();
         }
     }
 }
