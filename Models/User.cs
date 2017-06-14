@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace shop.Models
 {
@@ -7,6 +8,7 @@ namespace shop.Models
     {
         private ISet<Order> _orders = new HashSet<Order>();
         public string Email { get; private set; }
+        [UserPassword(length: 6)]
         public string Password { get; private set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

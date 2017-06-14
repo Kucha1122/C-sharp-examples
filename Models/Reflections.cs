@@ -2,6 +2,7 @@ using System;
 using System.Dynamic;
 using System.Linq;
 using System.Reflection;
+using System.ComponentModel.DataAnnotations;
 
 namespace shop.Models
 {
@@ -68,5 +69,31 @@ namespace shop.Models
             }
         }
 
+    }
+
+    public class Attributes
+    {
+        public void Test()
+        {
+            var user = new User("user@email.com", "haselko");
+            var passwordAttribute = (UserPasswordAttribute)user.GetType()
+                                        .GetTypeInfo()
+                                        .GetProperty("Password")
+                                        .GetCustomAttribute(typeof(UserPasswordAttribute));
+
+            var isPasswordValid = user.Password.Length == passwordAttribute.Length;
+            Console.WriteLine($"Is valid: {isPasswordValid}.");
+        }
+    }
+
+    [AttributeUsage(AttributeTargets.Property)]
+    public class UserPasswordAttribute : Attribute
+    {
+        public int Length { get; }
+
+        public UserPasswordAttribute(int length = 4)
+        {
+            Length = length;
+        }
     }
 }
