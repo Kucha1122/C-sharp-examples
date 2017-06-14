@@ -5,6 +5,7 @@ using System.Reflection;
 using System.ComponentModel.DataAnnotations;
 using System.Net.Http;
 using System.Threading.Tasks;
+using System.Threading;
 
 namespace shop.Models
 {
@@ -113,6 +114,19 @@ namespace shop.Models
             var content = await response.Content.ReadAsStringAsync();
 
             return content;
+        }
+    }
+
+    public class Paralellism
+    {
+        public void Test()
+        {
+            var numbers = Enumerable.Range(1,100);
+            Parallel.ForEach(numbers, number => 
+            {
+                Console.WriteLine($"Number {number} on thread {Thread.CurrentThread.ManagedThreadId}");
+                Thread.Sleep(100);
+            });
         }
     }
 }
