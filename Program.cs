@@ -1,5 +1,4 @@
 ﻿using System;
-using Episode3.Models;
 using shop.Models;
 
 namespace shop
@@ -8,8 +7,8 @@ namespace shop
     {
         static void Main(string[] args)
         {
-            var enumerations = new Enumerations();
-            enumerations.Test();
+            var reflections = new Reflections();
+            reflections.Test();
         }
     }
 }
